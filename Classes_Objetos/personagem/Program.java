@@ -1,5 +1,3 @@
-package com.example.demo;
-
 public class Program {
 	public static void main(String[] args) {
         PersonagemGame personagem1 = new PersonagemGame();
