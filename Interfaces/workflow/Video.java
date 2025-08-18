@@ -1,21 +1,21 @@
 public class Video {
 	
-	private String nome;
+	private String arquivo;
 	private FormatoVideo formato;
 	
 	
 	
-	public Video(String nome, FormatoVideo formato) {
+	public Video(String arquivo, FormatoVideo formato) {
 		super();
-		this.nome = nome;
+		this.arquivo = arquivo;
 		this.formato = formato;
 	}
 	
-	public String getNome() {
-		return nome;
+	public String getArquivo() {
+		return arquivo;
 	}
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setArquivo(String arquivo) {
+		this.arquivo = arquivo;
 	}
 	public FormatoVideo getFormato() {
 		return formato;

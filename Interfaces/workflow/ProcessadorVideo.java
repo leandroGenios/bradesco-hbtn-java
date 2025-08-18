@@ -9,8 +9,7 @@ public class ProcessadorVideo {
 	
 	public ProcessadorVideo() {
 		super();
-		
-		canais = new ArrayList<>();
+		canais = new ArrayList<CanalNotificacao>();
 	}
 
 	public void registrarCanal (CanalNotificacao canal) {
@@ -19,7 +18,7 @@ public class ProcessadorVideo {
 	
 	public void processar(Video video) {
 		for (CanalNotificacao canalNotificacao : canais) {
-			Mensagem m = new Mensagem(String.format("%s - %s",video.getNome(), video.getFormato()), TipoMensagem.LOG);
+			Mensagem m = new Mensagem(String.format("%s - %s",video.getArquivo(), video.getFormato()), TipoMensagem.LOG);
 			canalNotificacao.notificar(m);
 		}
 	}
