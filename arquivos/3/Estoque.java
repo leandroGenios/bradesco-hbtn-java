@@ -67,7 +67,6 @@ public class Estoque {
         Produto novoProduto = new Produto(novoId, nome, quantidade, preco);
         produtos.add(novoProduto);
         salvarEstoque();
-        System.out.println("Produto adicionado com sucesso: " + novoProduto);
     }
 
     // Excluir produto por ID
