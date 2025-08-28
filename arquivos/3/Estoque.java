@@ -42,7 +42,7 @@ public class Estoque {
     private void salvarEstoque() {
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(arquivoCsv))) {
             for (Produto p : produtos) {
-                bw.write(p.toCsv());
+                bw.write(p.getId() + "," + p.getNome() + "," + p.getQuantidade() + "," + p.getPreco());
                 bw.newLine();
             }
         } catch (IOException e) {
