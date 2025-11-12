@@ -17,13 +17,15 @@ public class PessoasArray {
         this.nomes = nomes;
     }
 
-    // Implementação do método com Complexidade O(1)
-    public void pesquisaTempoConstante(int id) {
+    // ✅ Implementação do método com Complexidade O(1)
+    public String pesquisaTempoConstante(int id) {
 
         if (id < 0 || id >= nomes.length) {
-            throw new IllegalArgumentException("O array de nomes possui :" + nomes.length + " nomes.");
+            throw new IllegalArgumentException(
+                    "O array de nomes possui " + nomes.length + " nomes."
+            );
         }
 
-        System.out.println("Nome pesquisado é " + nomes[id] + " que está na posição " + id);
+        return "Nome pesquisado é " + nomes[id] + " que está na posição " + id;
     }
 }
